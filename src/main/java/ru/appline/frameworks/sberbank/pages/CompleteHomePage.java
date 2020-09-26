@@ -10,7 +10,7 @@ import static ru.appline.frameworks.sberbank.managers.DriverManager.getDriver;
 public class CompleteHomePage extends BasePage {
 
     @FindBy(xpath = "//div[@data-label='Стоимость недвижимости']/input")
-    WebElement costHomeInput;
+    private WebElement costHomeInput;
 
     @FindBy(xpath = "//div[@data-label='Первоначальный взнос']/input")
     WebElement initFeeInput;
