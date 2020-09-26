@@ -10,13 +10,13 @@ import java.util.List;
 public class StartPage extends BasePage {
 
     @FindBy(xpath = "//li[@class='kitt-top-menu__item kitt-top-menu__item_first']/label")
-    List<WebElement> listTopMenu;
+    private List<WebElement> listTopMenu;
 
     @FindBy(xpath = "//li[contains(@class, 'kitt-top-menu__item_opened')]//li")
-    List<WebElement> listSubMenu;
+    private List<WebElement> listSubMenu;
 
     @FindBy(xpath = "//div[@class = 'kitt-cookie-warning__content']/button[contains(text(), 'Закрыть')]")
-    WebElement closeCookies;
+    private WebElement closeCookies;
 
     @Step("Переход в меню {nameMenu}")
     public StartPage selectMenu(String nameMenu){

@@ -17,7 +17,7 @@ import static ru.appline.frameworks.sberbank.managers.DriverManager.getDriver;
 public class BasePage {
 
     @FindBy(xpath = "//div[@data-test-id='main-results-block']")
-    WebElement resultBlock;
+    private WebElement resultBlock;
 
     protected ManagerPages app = ManagerPages.getManagerPages();
     protected Actions action = new Actions(getDriver());
@@ -29,23 +29,23 @@ public class BasePage {
         PageFactory.initElements(getDriver(), this);
     }
 
-    protected void scrollToElementJs(WebElement element) {
+    public void scrollToElementJs(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
-    protected WebElement elementToBeClickable(WebElement element) {
+    public WebElement elementToBeClickable(WebElement element) {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
-    protected WebElement elementToBeVisible(WebElement element) {
+    public WebElement elementToBeVisible(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    protected boolean elementToBeChanged(WebElement element, String attribute, String beforeValue) {
+    public boolean elementToBeChanged(WebElement element, String attribute, String beforeValue) {
         return wait.until(ExpectedConditions.not(ExpectedConditions.attributeToBe(element, attribute, beforeValue)));
     }
 
-    protected String cleanNumber(String priceString){
+    public String cleanNumber(String priceString){
         String price = "";
         String numbers = "0987654321.,";
         for (int i = 0; i < priceString.length(); ++i) {

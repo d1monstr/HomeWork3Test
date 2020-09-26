@@ -13,40 +13,40 @@ public class CompleteHomePage extends BasePage {
     private WebElement costHomeInput;
 
     @FindBy(xpath = "//div[@data-label='Первоначальный взнос']/input")
-    WebElement initFeeInput;
+    private WebElement initFeeInput;
 
     @FindBy(xpath = "//div[@data-label='Срок кредита']/input")
-    WebElement creditDateinput;
+    private WebElement creditDateinput;
 
     @FindBy(xpath = "//h2[contains(text(), 'Рассчитайте ипотеку')]")
-    WebElement scrollField;
+    private WebElement scrollField;
 
     @FindBy(xpath = "//span[contains(text(), 'Есть зарплатная карта Сбербанка')]/..//input")
-    WebElement checkboxSalaryCard;
+    private WebElement checkboxSalaryCard;
 
     @FindBy(xpath = "//span[contains(text(), 'Использовать материнский капитал')]/..//input")
-    WebElement checkboxMatCapital;
+    private WebElement checkboxMatCapital;
 
     @FindBy(xpath = "//span[contains(text(), 'Скидка 0,3% при покупке квартиры на ДомКлик')]/../..//input")
-    WebElement checkboxDiscount;
+    private WebElement checkboxDiscount;
 
     @FindBy(xpath = "//span[contains(text(), 'Страхование жизни')]/../..//input")
-    WebElement checkboxLifeInsurance;
+    private WebElement checkboxLifeInsurance;
 
     @FindBy(xpath = "//span[contains(text(), 'Молодая семья')]/../..//input")
-    WebElement checkboxYoungFamily;
+    private WebElement checkboxYoungFamily;
 
     @FindBy(xpath = "//span[contains(text(), 'Электронная регистрация сделки')]/../..//input")
-    WebElement checkboxElReg;
+    private WebElement checkboxElReg;
 
     @FindBy(xpath = "//span[contains(text(), 'Есть возможность подтвердить доход справкой')]/..//input")
-    WebElement checkboxIncomeStat;
+    private WebElement checkboxIncomeStat;
 
     @FindBy(xpath = "//iframe[@id = 'iFrameResizer0']")
-    WebElement iFrameElement;
+    private WebElement iFrameElement;
 
     @FindBy(xpath = "//div[@data-test-id='main-results-block']")
-    WebElement resultBlock;
+    private WebElement resultBlock;
 
     @Step("Проверка результата {nameCheckResult} на значение {valueCheckResult}")
     public CompleteHomePage checkResult(String nameCheckResult, String valueCheckResult){
