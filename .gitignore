@@ -2,6 +2,6 @@
 .allure
 target
 
-.iml
-.war
-.jar
+*.iml
+*.war
+*.jar
