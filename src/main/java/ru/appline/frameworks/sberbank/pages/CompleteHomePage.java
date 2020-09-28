@@ -149,7 +149,7 @@ public class CompleteHomePage extends BasePage {
                         "'Ипотека на готовое жилье'");
         }
         Assert.assertEquals("Поле '" + nameField + "' было заполнено некорректно",
-                numbersToWithSpace(value), element.getAttribute("value"));
+                cleanNumber(value), cleanNumber(element.getAttribute("value")));
         getDriver().switchTo().parentFrame();
         return this;
     }
